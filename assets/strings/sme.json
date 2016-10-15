@@ -1,0 +1,62 @@
+{
+    "@metadata": {
+        "authors": [
+            "Lene Antonsen",
+            "unhammer"
+        ],
+        "last-updated": "2014-05-18",
+        "locale": [
+            "se",
+            "sme"
+        ],
+        "completion": " 66%  21.88%",
+        "missing": [
+            "Translate_Document",
+            "Cancel",
+            "Apertium_Downloads",
+            "Documentation_Para",
+            "About_Apertium",
+            "Instant_Translation",
+            "Downloads_Para",
+            "File_Too_Large",
+            "Enable_JS_Warning",
+            "Format_Not_Supported",
+            "description",
+            "Drop_Document",
+            "Download_File",
+            "What_Is_Apertium",
+            "Contact_Para",
+            "Not_Found_Error"
+        ]
+    },
+    "title": "Apertium | Friddja ja rabasgáldokodavuđot dihtorjorgalanvuogádat",
+    "tagline": "Friddja ja rabasgáldokodavuđot dihtorjorgalanvuogádat",
+    "Translation": "Jorgaleapmi",
+    "Translation_Help": "Vállje guokte giela ja jorgal teavstta Apertiuma dihtorjorgalanvuogádagain!",
+    "Translate": "Jorgal",
+    "Detect_Language": "Dovdá giela",
+    "detected": "Árvaluvvon giella",
+    "Not_Available": "Jorgalus ii gávdno!",
+    "Morphological_Analysis": "Morfologalaš analysa",
+    "Morphological_Analysis_Help": "Vállje giela ja analysere teavstta Apertiuma morfologalaš analysáhtoriin.",
+    "Analyze": "Analysere",
+    "Morphological_Generation": "Morfologalaš genereren",
+    "Morphological_Generation_Help": "Vállje giela ja generere teavstta sátnehámiid Apertiuma morfologalaš analysáhtoriin.",
+    "Generate": "Generere",
+    "Spell_Checker": "Sátnedárkkisteapmi",
+    "APY_Sandbox": "APY-sáttokássa",
+    "APY_Sandbox_Help": "Gohččomiid geavaheapmi",
+    "APY_Request": "APY-gohččun",
+    "Request": "Gohččun",
+    "Language": "Giella",
+    "Input_Text": "Álgoteaksta",
+    "Notice_Mistake": "Gávdnetgo meattáhusa?",
+    "Help_Improve": "Veahket min buoridit Apertiuma!",
+    "Contact_Us": "Váldde áinnas oktavuođa minguin jus gávnnat meattáhusa, jus dus lea miella bargat prošeavttain dahje don eará ládje háliidat min veahkehit.",
+    "Maintainer": "Dán neahttabáikki fuolaha {{maintainer}}.",
+    "About_Title": "Neahttabáikki birra",
+    "About": "Birra",
+    "Download": "Viežžat",
+    "Contact": "Váldde oktavuođa",
+    "Documentation": "Dokumentašuvdna"
+}

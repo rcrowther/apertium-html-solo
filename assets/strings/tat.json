@@ -1,0 +1,62 @@
+{
+    "@metadata": {
+        "authors": [
+            "selimcan",
+            "jonorthwash"
+        ],
+        "last-updated": "2014-05-06",
+        "locale": [
+            "tt",
+            "tat"
+        ],
+        "completion": " 71%  19.77%",
+        "missing": [
+            "Translate_Document",
+            "Cancel",
+            "Apertium_Downloads",
+            "Documentation_Para",
+            "Downloads_Para",
+            "File_Too_Large",
+            "Enable_JS_Warning",
+            "Format_Not_Supported",
+            "description",
+            "Drop_Document",
+            "Download_File",
+            "What_Is_Apertium",
+            "Contact_Para",
+            "Not_Found_Error"
+        ]
+    },
+    "title": "Apertium | A free/open-source machine translation platform",
+    "tagline": "A free/open-source machine translation platform",
+    "Translation": "Тәрҗемә итү",
+    "Translation_Help": "Телләрне сайлагыз һәм текстыгызны Apertium ярдәмендә тәрҗемә итегез!",
+    "Translate": "Tәржемә итү",
+    "Detect_Language": "телне ачыкла",
+    "detected": "ачыкланды",
+    "Instant_Translation": "Синхрон тәрҗемә",
+    "Not_Available": "Тәрҗемә әзер түгел.",
+    "Morphological_Analysis": "Морфологик анализ",
+    "Morphological_Analysis_Help": "Телне сайлап, текстыгызны Апертиум морфологик анализаторлары ярдәмендә анализлагыз.",
+    "Analyze": "Анализлау",
+    "Morphological_Generation": "Морфологик синтез",
+    "Morphological_Generation_Help": "Телне сайлап, Апертиум морфологик генераторлары ярдәмендә сүзформалар синтезлагыз.",
+    "Generate": "Синтезлау",
+    "Spell_Checker": "Хата тикшергеч",
+    "APY_Sandbox": "APY комлык",
+    "APY_Sandbox_Help": "Cоратулар җибәрү",
+    "APY_Request": "APY сорату",
+    "Request": "Сорату",
+    "Language": "Тел",
+    "Input_Text": "Кереш текст",
+    "Notice_Mistake": "Хата күрдегезме?",
+    "Help_Improve": "Апертиумны яхшыртырга ярдәм итегез!",
+    "Contact_Us": "Хата тапсагыз, ярдәм итәсегез килсә я тәкъдимнәрегез булса, безгә хат языгыз.",
+    "Maintainer": "Бу сайтның хуҗасы — {{maintainer}} төркеме.",
+    "About_Title": "Сайт турында",
+    "About": "Сайт турында",
+    "Download": "Йөкләү",
+    "Contact": "Элемтә",
+    "Documentation": "Документация",
+    "About_Apertium": "Apertium турында"
+}

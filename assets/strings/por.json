@@ -1,0 +1,62 @@
+{
+    "@metadata": {
+        "authors": [
+            "hbwashington",
+            "sushain97"
+        ],
+        "last-updated": "2014-05-11",
+        "locale": [
+            "pt",
+            "por"
+        ],
+        "completion": " 62%  19.64%",
+        "missing": [
+            "Translate_Document",
+            "Cancel",
+            "Apertium_Downloads",
+            "Documentation",
+            "Documentation_Para",
+            "About_Apertium",
+            "Downloads_Para",
+            "Download",
+            "Contact",
+            "Format_Not_Supported",
+            "Enable_JS_Warning",
+            "File_Too_Large",
+            "Download_File",
+            "description",
+            "Contact_Para",
+            "Not_Found_Error",
+            "Drop_Document",
+            "What_Is_Apertium"
+        ]
+    },
+    "title": "Apertium | Uma plataforma livre para a tradução automática",
+    "tagline": "Plataforma livre para a tradução automática",
+    "Translation": "Tradução",
+    "Translation_Help": "Escolha duas línguas e traduza textos com Apertium!",
+    "Translate": "Traduzir",
+    "Detect_Language": "Detectar língua",
+    "detected": "detectada",
+    "Instant_Translation": "tradução instantânea",
+    "Not_Available": "Tradução aina não disponível!",
+    "Morphological_Analysis": "Análise morfológica",
+    "Morphological_Analysis_Help": "Escolha uma língua e analise textos com os analisadores morfológicos de Apertium.",
+    "Analyze": "Analisar!",
+    "Morphological_Generation": "Geração morfológica",
+    "Morphological_Generation_Help": "Escolha uma língua e gere formas superficiais a partir das formas léxicas das palavras.",
+    "Generate": "Gerar",
+    "Spell_Checker": "Corretor ortográfico",
+    "APY_Sandbox": "Entorno de provas",
+    "APY_Sandbox_Help": "Envie qualquer consulta",
+    "APY_Request": "Consulta de APY",
+    "Request": "Consulta",
+    "Language": "Língua",
+    "Input_Text": "Texto de entrada",
+    "Notice_Mistake": "Encontrou um erro?",
+    "Help_Improve": "Ajude-nos a melhorar Apertium!",
+    "Contact_Us": "Contate-nos se encontrar um erro, pensar um projeto para nós fazermos, ou quiser ajudar.",
+    "Maintainer": "Este website é mantido por {{maintainer}}.",
+    "About_Title": "Sobre este Website",
+    "About": "Sobre"
+}

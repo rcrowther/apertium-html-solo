@@ -1,0 +1,62 @@
+{
+    "@metadata": {
+        "authors": [
+            "jonorthwash",
+            "tolgonay"
+        ],
+        "last-updated": "2014-05-10",
+        "locale": [
+            "ky",
+            "kir"
+        ],
+        "completion": " 86%  33.26%",
+        "missing": [
+            "Documentation_Para",
+            "Downloads_Para",
+            "Format_Not_Supported",
+            "description",
+            "Drop_Document",
+            "What_Is_Apertium",
+            "Contact_Para"
+        ]
+    },
+    "title": "Apertium | Эркин/ачык машинелик котормо платформасы",
+    "tagline": "Эркин/ачык машинелик котормо платформасы",
+    "Translation": "Которуу",
+    "Translation_Help": "Тилдерди тандап, текстиңизди Апертиумдун жардамы менен которуу!",
+    "Translate": "Котор",
+    "Detect_Language": "Тилди автоматтык түрдө аныктоо",
+    "detected": "автоматтык түрдө аныкталды",
+    "Instant_Translation": "Ыкчам которуу",
+    "Translate_Document": "Документ которуу",
+    "Not_Available": "Котормо даяр эмес",
+    "File_Too_Large": "Файлдын көлөмү лимиттен ашып кетти!",
+    "Cancel": "Артка кайтуу",
+    "Download_File": "{{fileName}} файлын жүктөп алуу",
+    "Morphological_Analysis": "Морфологиялык талдоо",
+    "Morphological_Analysis_Help": "Тилди тандап, Апертиум морфологиялык талдагычтары менен текстиңизди талдоо",
+    "Analyze": "Талдоо",
+    "Morphological_Generation": "Морфологиялык синтездөө",
+    "Morphological_Generation_Help": "Тилди танадп, Апертиум морфологиялык талдагычтарынын жардамы менен сөзформалар синтездөө.",
+    "Generate": "Синтездөө",
+    "Spell_Checker": "Катаны текшерүү",
+    "APY_Sandbox": "APY кум аянтчасы",
+    "APY_Sandbox_Help": "Каалаган сурамжылоону жөнөтүү",
+    "APY_Request": "APY сурамжылоосу",
+    "Request": "Сурамжылоо",
+    "Language": "Тил",
+    "Input_Text": "Киргизилген текст",
+    "Notice_Mistake": "Кандайдыр бир ката таптыңызбы?",
+    "Help_Improve": "Апертиумду жакшыртууга жардам бериңиз!",
+    "Contact_Us": "Эгер катаны табсаңыз, проектти демитүү тууралуу калооңуз болсо же жардамдашкыңыз келсе, бизге кабарлаңыз.",
+    "Maintainer": "Бул вебсайт {{maintainer}} аркылуу башкарылат.",
+    "About_Title": "Бул вебсайт жөнүндө",
+    "Enable_JS_Warning": "Бул сайт JavaScript аркылуу гана иштейт.  Эгер <a href='http://www.enable-javascript.com/' target='_blank'>Javascriptти иштете</a> албасаңыз, <a href='http://traductor.prompsit.com' target='_blank'>Prompsitтеги котормочуларды</a> колдонсоңуз болот.",
+    "Not_Found_Error": "<b>Ката 404:</b> Кечириңиз, изделген баракча табылган жок!",
+    "About": "Проект жөнүндө",
+    "Download": "Жүктөп алуу",
+    "Contact": "Байланышуу",
+    "Documentation": "Документация",
+    "About_Apertium": "Апертиум жөнүндө",
+    "Apertium_Downloads": "Апертиумду жүктөп алуу"
+}
