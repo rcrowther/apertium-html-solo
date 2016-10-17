@@ -8,7 +8,8 @@ The changes (that I remember): Header and footer entirely removed, new user-info
 
 New: reduction to blocked words at 7000 chars. Keep the translate button, even on small devices (and it ought to have reroute fallback to a config option).
 
-New: goodbye to fancy fonts. No spinner. Language selection removed entirely. Lock on language choices. New dull navbar.
+New: goodbye to fancy fonts. No spinner. Scrollbars back on text areas.
+Text area resizing confusing, removed. Language selection removed entirely. Lock on language choices. New dull navbar.
 
 Otherwise, it compiles and looks like the original.
 
