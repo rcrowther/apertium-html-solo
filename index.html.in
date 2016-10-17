@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description"  data-textattr="content" data-text="description" content="Apertium is a rule-based machine translation platform. It is free software and released under the terms of the GNU General Public License.">
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="http://archaicgroves.co.uk/favicon.ico">
 
     <!-- <link type="text/css" rel="stylesheet" href="./css/icon-globe.css"> -->
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu"> <!-- Selectivzr bug requires this being in <link> rather than @import -->
+    <!-- Selectivzr bug requires this being in <link> rather than @import -->
+    <!--
+    Unused - in Slate?
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu"> 
 
     <link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript">
       if(!window.jQuery) {
@@ -32,8 +35,10 @@
 
         <!--[if lt IE 9]> <script type="text/javascript" src="./js/compat.js"></script> <![endif]-->
 	@include_head@
-        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.2.0-rc2/css/bootstrap-rtl.min.css" class="rtlStylesheet"> <!-- Positioned to override styles in bootstrap.css -->
-
+    <!--
+    No RTL, one less thing to load...
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.2.0-rc2/css/bootstrap-rtl.min.css" class="rtlStylesheet"> 
+-->
         <!--[if lt IE 9]>
             <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
             <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -59,18 +64,29 @@
   </head>
 
   <body>
+                      <nav class="navbar navbar-default">
+<ul>
+    <!--
+    <ul class="nav navbar-nav">
+-->
+  <li><a href="http://archaicgroves.co.uk/projects/en-lanc/about">About</a></li>
+  <li><a href="http://archaicgroves.co.uk/projects/en-lanc/help">Help</a></li>
+</ul>
+  </div>
+</nav>
+    <!--
     <span class="fa hide" id="faChecker"></span>
+
     <script type="text/javascript">
       if($('#faChecker').css('fontFamily') !== 'FontAwesome') {
       $('<link type="text/css" rel="stylesheet" href="./css/font-awesome.min.css">').appendTo('head');
       console.warn('FontAwesome CSS from CDN not available - reverting to local copy');
       }
     </script>
-
+-->
 
 
     <div id="wrap">
-      
       <div class="container">
 
         <!-- Not found warning -->
@@ -81,24 +97,25 @@
             <fieldset>
               <legend data-text="Translation_Help"></legend>
 
-<p class="translation-credit">
-		(powered by the Apertium Translation Platform)
-</p>
-
               <div class="form-group">
+                                      <!--
                 <div class="hidden-xs col-sm-6">
+
                   <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm srcLang active" id="srcLang1"></button>
-                    <button type="button" class="btn btn-default btn-sm srcLang" id="srcLang2"></button>
+                    <button type="button" class="btn btn-default btn-sm srcLang" id="srcLang1"></button>
+                    <button type="button" class="btn btn-default btn-sm srcLang active" id="srcLang2"></button>
                   </div>
                   <button type="button" class="btn btn-default btn-sm pull-right swapLangBtn"><i class="fa fa-exchange"></i></button>
                 </div>
                 <div class=" hidden-xs col-sm-4">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm dstLang active" id="dstLang1"></button>
-                    <button type="button" class="btn btn-default btn-sm dstLang" id="dstLang2"></button>
+                    <button type="button" class="btn btn-default btn-sm dstLang" id="dstLang1"></button>
+                    <button type="button" class="btn btn-default btn-sm dstLang active" id="dstLang2"></button>
                   </div>
                 </div>
+                -->
+                <div class="hidden-xs col-sm-6"></div>
+                <div class=" hidden-xs col-sm-4"></div>
                 <div class="col-sm-2">
                   <button type="button" id="translate" class="btn btn-primary btn-sm pull-right translateBtn" data-text="Translate">Translate</button>
                 </div>
@@ -106,7 +123,7 @@
               <div class="form-group">
                 <div id="translateText">
                   <div class="col-sm-6">
-                    <textarea class="form-control" id="originalText" rows="15" spellcheck="false"></textarea>
+                    <textarea class="form-control" id="originalText" rows="15" spellcheck="false">Add text here, press the 'translate' button</textarea>
                     <button class="btn clearButton"><i class="fa fa-times"></i></button>
                   </div>
                   <div class="col-sm-6">
@@ -123,16 +140,12 @@
 	  <div class="push" style="text-align:center;">
 	    <div class="row">
               <div class="col-md-6">
-		<em>(the dictionary is small. Paste some text e.g. <a href="http://www.gutenberg.org/files/53214/53214-h/53214-h.htm">The Mystery of the Fifteen Sounds</a> by Van Powell, look for changes)</em>
+		<em>(the dictionary is small. Paste some text, look for changes)</em>
 	      </div>
               <div class="col-md-6">
 		<em>(hash characters = dictionary unsure about translation)</em>
 	      </div>
 	    </div>
-	    <div class="row">
-              <div class="col-md-offset-6 col-md-6">
-		<a href="../about.htm">Read about the translator</a>
-	      </div>
 
 	  </div>
 

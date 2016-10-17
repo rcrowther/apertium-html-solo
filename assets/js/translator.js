@@ -11,12 +11,15 @@ var TEXTAREA_AUTO_RESIZE_MINIMUM_WIDTH = 768,
     TRANSLATION_LIST_ROWS = 8,
     TRANSLATION_LIST_COLUMNS = 4;
 
+/* This horrible bodge is the only way so far to set the langauges */
+var INIT_LANGUAGE_INDEX = 1
+
 /* exported getPairs */
 
 if(modeEnabled('translation')) {
     $(document).ready(function () {
-        synchronizeTextareaHeights();
-
+        //synchronizeTextareaHeights();
+/*
         $('#srcLanguages').on('click', '.languageName:not(.text-muted)', function () {
             curSrcLang = $(this).attr('data-code');
             handleNewCurrentLang(curSrcLang, recentSrcLangs, 'srcLang');
@@ -51,13 +54,13 @@ if(modeEnabled('translation')) {
             localizeInterface();
             translateText();
         });
-
+*/
         $('button#translate').click(function () {
             translate();
             //persistChoices('translator', true);
         });
 
-        $(window).resize(synchronizeTextareaHeights);
+        //$(window).resize(synchronizeTextareaHeights);
 /*
         $('#originalText').blur(function () {
             persistChoices('translator', true);
@@ -74,9 +77,9 @@ if(modeEnabled('translation')) {
         $('.clearButton').click(function () {
             $('#originalText, #translatedText').val('');
             $('#originalText').focus();
-            synchronizeTextareaHeights();
+            //synchronizeTextareaHeights();
         });
-
+/*
         $('.swapLangBtn').click(function () {
             var srcCode = $('.srcLang.active').attr('data-code'), dstCode = $('.dstLang.active').attr('data-code');
             curSrcLang = dstCode;
@@ -117,6 +120,7 @@ if(modeEnabled('translation')) {
         $('#dstLangSelect').change(function () {
             handleNewCurrentLang(curDstLang = $(this).val(), recentDstLangs, 'dstLang', true);
         });
+        */
     });
 }
 
@@ -169,8 +173,9 @@ function getPairs() {
         srcLangs = filterLangList(srcLangs.filter(onlyUnique));
         dstLangs = filterLangList(dstLangs.filter(onlyUnique));
 
-        curSrcLang = srcLangs[0];
-        curDstLang = dstLangs[0];
+/* This horrible bodge is the only way so far to set the langauges */
+        curSrcLang = srcLangs[INIT_LANGUAGE_INDEX];
+        curDstLang = dstLangs[INIT_LANGUAGE_INDEX];
         for(var i = 0; i < 3; i++) {
             recentSrcLangs.push(i < srcLangs.length ? srcLangs[i] : undefined);
             recentDstLangs.push(i < dstLangs.length ? dstLangs[i] : undefined);
@@ -182,7 +187,7 @@ function getPairs() {
 
     return deferred.promise();
 }
-
+/*
 function handleNewCurrentLang(lang, recentLangs, langType, resetDetect) {
     $('.' + langType).removeClass('active');
     if(recentLangs.indexOf(lang) === -1) {
@@ -205,7 +210,8 @@ function handleNewCurrentLang(lang, recentLangs, langType, resetDetect) {
     localizeInterface();
     translateText();
 }
-
+*/
+/*
 function refreshLangList(resetDetect) {
     recentSrcLangs = filterLangList(recentSrcLangs, srcLangs);
     recentDstLangs = filterLangList(recentDstLangs, dstLangs);
@@ -248,6 +254,7 @@ function refreshLangList(resetDetect) {
         return recentLangs;
     }
 }
+*/
 
 function populateTranslationList() {
     sortTranslationList();
@@ -310,7 +317,7 @@ function populateTranslationList() {
     $('#srcLangSelect').val(curSrcLang);
     $('#dstLangSelect').val(curDstLang);
 
-    muteLanguages();
+    //muteLanguages();
 
     function sortTranslationList() {
         var sortLocale = locale in iso639Codes ? iso639Codes[locale] : locale;
@@ -401,7 +408,7 @@ function translationNotAvailable() {
     $('#translatedText').text(dynamicLocalizations['Not_Available']);
     $('#translatedText').addClass('notAvailable text-danger');
 }
-
+/*
 function muteLanguages() {
     $('.languageName.text-muted').removeClass('text-muted');
     $('.dstLang').removeClass('disabledLang').prop('disabled', false);
@@ -421,7 +428,8 @@ function muteLanguages() {
         $(element).prop('disabled', !pairs[curSrcLang] || pairs[curSrcLang].indexOf($(element).val()) === -1);
     });
 }
-
+*/
+/*
 function autoSelectDstLang() {
     if(pairs[curSrcLang] && pairs[curSrcLang].indexOf(curDstLang) === -1) {
         var newDstLang;
@@ -449,17 +457,17 @@ function autoSelectDstLang() {
         }
     }
 }
+*/
+//function synchronizeTextareaHeights() {
+    //if($(window).width() < TEXTAREA_AUTO_RESIZE_MINIMUM_WIDTH) {
+        //return;
+    //}
 
-function synchronizeTextareaHeights() {
-    if($(window).width() < TEXTAREA_AUTO_RESIZE_MINIMUM_WIDTH) {
-        return;
-    }
-
-    $('#originalText').css({
-        'overflow-y': 'hidden',
-        'height': 'auto'
-    });
-    var originalTextScrollHeight = $('#originalText')[0].scrollHeight;
-    $('#originalText').css('height', originalTextScrollHeight + 'px');
-    $('#translatedText').css('height', originalTextScrollHeight + 'px');
-}
+    //$('#originalText').css({
+        //'overflow-y': 'scroll',
+        //'height': 'auto'
+    //});
+    //var originalTextScrollHeight = $('#originalText')[0].scrollHeight;
+    //$('#originalText').css('height', originalTextScrollHeight + 'px');
+    //$('#translatedText').css('height', originalTextScrollHeight + 'px');
+//}

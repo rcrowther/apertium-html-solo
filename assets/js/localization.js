@@ -260,14 +260,16 @@ function localizeLanguageNames(localizedNamesFromJSON) {
 
         if(modeEnabled('translation')) {
             populateTranslationList();
-            refreshLangList();
+            //refreshLangList();
         }
+        /*
         if(modeEnabled('generation')) {
             populateGeneratorList(generatorData);
         }
         if(modeEnabled('analyzation')) {
             populateAnalyzerList(analyzerData);
         }
+        */
     }
 }
 
