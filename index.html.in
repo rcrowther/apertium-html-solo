@@ -72,6 +72,7 @@
     <div id="wrap">
       
       <div class="container">
+
         <!-- Not found warning -->
         <div id="loading-indicator"><i class="fa fa-spinner fa-spin fa-4x"></i></div>
 	
@@ -79,6 +80,11 @@
           <form class="form-horizontal" role="form" id="translationForm">
             <fieldset>
               <legend data-text="Translation_Help"></legend>
+
+<p class="translation-credit">
+		(powered by the Apertium Translation Platform)
+</p>
+
               <div class="form-group">
                 <div class="hidden-xs col-sm-6">
                   <div class="btn-group">
@@ -127,7 +133,7 @@
               <div class="col-md-offset-6 col-md-6">
 		<a href="../about.htm">Read about the translator</a>
 	      </div>
-	    </div>
+
 	  </div>
 
 	  
