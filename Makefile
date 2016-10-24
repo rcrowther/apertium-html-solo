@@ -5,7 +5,7 @@ js: build/js/min.js build/js/compat.js build/js/jquery.min.js build/js/bootstrap
 debugjs: build/js/jquery.jsonp-2.4.0.min.js build/js/config.js build/js/util.js build/js/persistence.js build/js/caching.js build/js/localization.js build/js/translator.js build/js/analyzer.js build/js/generator.js build/js/sandbox.js
 css: build/css/min.css build/css/font-awesome.min.css build/css/bootstrap-rtl.min.css debugcss
 debugcss: build/css/bootstrap.css build/css/style.css
-html: build/index.html build/index.debug.html build/not-found.html
+html: generate-sample.html build/index.html build/index.debug.html build/not-found.html
 fonts: build/fonts/fontawesome-webfont.woff build/fonts/fontawesome-webfont.ttf build/fonts/fontawesome-webfont.svg build/fonts/fontawesome-webfont.eot
 
 # Note: the min.{js,css} are equal to all.{js,css}; minification gives
@@ -90,6 +90,10 @@ build/js/%.js: assets/js/%.js build/js/.d
 
 
 ### HTML ###
+# pregen for samples. Stamp the hacks in first...
+generate-sample.html: samples.json
+	./generate-samples.py 
+
 build/index.debug.html: index.html.in debug-head.html build/l10n-rel.html build/.PIWIK_URL build/.PIWIK_SITEID build/strings/eng.json config.conf read-conf.py localise-html.py build/.d
 	sed -e '/@include_head@/r debug-head.html' -e '/@include_head@/r build/l10n-rel.html' -e '/@include_head@/d' -e "s%@include_piwik_url@%$(shell cat build/.PIWIK_URL)%" -e "s%@include_piwik_siteid@%$(shell cat build/.PIWIK_SITEID)%" $< > $@
 	./localise-html.py -c config.conf $@ build/strings/eng.json $@
@@ -110,7 +114,6 @@ build/index.localiseme.html: index.html.in build/prod-head.html build/l10n-rel.h
 ## HTML localisation
 # JSON-parsing-regex ahoy:
 localhtml: $(shell sed -n 's%^[^"]*"\([^"]*\)":.*%build/index.\1.html build/strings/\1.json% p' assets/strings/locales.json)
-
 
 # hreflang requires iso639-1 :/ Fight ugly with ugly:
 build/l10n-rel.html: assets/strings/locales.json isobork build/.d

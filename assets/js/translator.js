@@ -11,8 +11,10 @@ var TEXTAREA_AUTO_RESIZE_MINIMUM_WIDTH = 768,
     TRANSLATION_LIST_ROWS = 8,
     TRANSLATION_LIST_COLUMNS = 4;
 
-/* This horrible bodge is the only way so far to set the langauges */
+/* This horrible bodge is the only way so far to set the langauges R.C. */
 var INIT_LANGUAGE_INDEX = 1
+
+
 
 /* exported getPairs */
 
@@ -73,12 +75,21 @@ if(modeEnabled('translation')) {
         $('#originalText').submit(function () {
             translateText();
         });
-
+/*
         $('.clearButton').click(function () {
             $('#originalText, #translatedText').val('');
             $('#originalText').focus();
             //synchronizeTextareaHeights();
         });
+*/
+
+        $('.sampleLink').click(function () {
+            id = $( this ).attr('id').split('-')[1];
+            //alert('id:' + id);
+            insertSampleText(id);
+        });
+
+ 
 /*
         $('.swapLangBtn').click(function () {
             var srcCode = $('.srcLang.active').attr('data-code'), dstCode = $('.dstLang.active').attr('data-code');
@@ -399,6 +410,10 @@ else {
 }
 }
 
+function sampleloadFailed() {
+    $('#originalText').val('*** Sample text failed to load. Try refreshing the browser? Return tomorrow? ***');
+}
+
 function translationTextTooLong() {
     $('#translatedText').text('*** text must be less than 7000 chars (is ' + $('#originalText').val().length +' chars) ***');
     $('#translatedText').addClass('notAvailable text-danger');
@@ -408,6 +423,38 @@ function translationNotAvailable() {
     $('#translatedText').text(dynamicLocalizations['Not_Available']);
     $('#translatedText').addClass('notAvailable text-danger');
 }
+
+
+function insertSampleText(index) {
+
+/*
+This code is post jQuery 1.5, if needed.
+var jqxhr = $.get( "sample" + index + ".htm", function() {
+  alert( "success" );
+})
+  jqxhr.done(function() {
+    alert( "$.get succeeded" );
+  })
+  jqxhr.fail(function() {
+    //alert( "$.get failed!" );
+	sampleloadFailed();
+  });
+*/
+  	$.ajax({
+      	url: "sample-" + index + ".htm",
+       	type: 'GET',
+       	dataType: 'text',
+       	success: function (data) {
+            $('#translatedText').text('');
+ 			$('#originalText').val(data);
+            $('#originalText').focus();
+           	},
+      	error: function (jqXHR, textStatus, errorThrow) {
+			sampleloadFailed();
+        	}
+  	});
+}
+
 /*
 function muteLanguages() {
     $('.languageName.text-muted').removeClass('text-muted');

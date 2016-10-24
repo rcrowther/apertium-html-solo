@@ -65,14 +65,17 @@
 
   <body>
                       <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                              <!--
 <ul>
-    <!--
-    <ul class="nav navbar-nav">
 -->
-  <li><a href="http://archaicgroves.co.uk/projects/en-lanc/about">About</a></li>
+    <ul class="nav navbar-nav">
+
   <li><a href="http://archaicgroves.co.uk/projects/en-lanc/help">Help</a></li>
+  <li><a href="http://archaicgroves.co.uk/projects/en-lanc/about">About</a></li>
+  <li><a href="http://archaicgroves.co.uk/projects/en-lanc/on_linguistics">On linguistics</a></li>
 </ul>
-  </div>
+</div>
 </nav>
     <!--
     <span class="fa hide" id="faChecker"></span>
@@ -114,9 +117,17 @@
                   </div>
                 </div>
                 -->
-                <div class="hidden-xs col-sm-6"></div>
-                <div class=" hidden-xs col-sm-4"></div>
-                <div class="col-sm-2">
+                <div class="col-sm-6">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default btn-sm pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Load a pre-defined text
+      <span class="caret"></span>
+    </button>
+    <ul id="selectsample" class="dropdown-menu">
+    </ul>
+  </div>
+</div>
+                <div class="col-sm-6">
                   <button type="button" id="translate" class="btn btn-primary btn-sm pull-right translateBtn" data-text="Translate">Translate</button>
                 </div>
               </div>

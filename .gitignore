@@ -1,5 +1,6 @@
 __pycache__/
 build/
 config.conf
+samples.json
 assets/js/config.js
 

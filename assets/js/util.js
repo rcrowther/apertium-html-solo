@@ -25,7 +25,7 @@ $(document).ready(function () {
     $('#noscript').hide();
     $('.navbar').css('margin-top', '0px');
     $('body > .container').css('margin-top', '0px');
-
+/*
     if(config.SHOW_NAVBAR) {
         if(config.ENABLED_MODES === null) {
             $('.nav a').removeClass('hide');
@@ -40,7 +40,7 @@ $(document).ready(function () {
         $('.navbar-default .navbar-toggle').hide();
         $('.navbar-default .nav').hide();
     }
-
+*/
     var hash = parent.location.hash;
 
     try {
@@ -56,6 +56,7 @@ $(document).ready(function () {
     }
 
     $('.modeContainer' + hash + 'Container').show();
+    /*
     $('.navbar-default .nav li > a[data-mode=' + hash.substring(1) + ']').parent().addClass('active');
 
     $('.navbar-default .nav a').click(function () {
@@ -70,7 +71,7 @@ $(document).ready(function () {
         });
         synchronizeTextareaHeights();
     });
-
+*/
     //$(window).on('hashchange', persistChoices);
 
     if(config.ALLOWED_LANGS) {

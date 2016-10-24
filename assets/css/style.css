@@ -7,6 +7,14 @@ h2 {
 .text-danger {
   color: #660000 !important;
 }
+.translation-credit{
+  font-style:italic;
+  margin-bottom: 20px;
+}
+legend{
+  margin-bottom: 0 !important;
+}
+
 .modeContainer {
     display: none;
 }

@@ -1,0 +1,11 @@
+{
+
+"A title. true or false indicates if the title should be quoted (inverted commas)":[
+            true,
+            "Some text for load"
+]
+"Another title":[
+            false,
+            "More text for load"
+]
+}

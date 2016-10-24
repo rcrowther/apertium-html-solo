@@ -11,6 +11,7 @@ read_conf = __import__('read-conf')
 
 rtl_languages = ['heb', 'ara', 'pes', 'urd', 'uig']
 
+
 class DataTextHTMLParser(HTMLParser):
     data_text = None
     output = []
@@ -48,6 +49,15 @@ class DataTextHTMLParser(HTMLParser):
             if tag == "html":
                 text = self.get_starttag_text()
                 self.p('<html dir="%s"' % ('rtl' if self.localename in rtl_languages else 'ltr') + text[text.index('html') + 4:])
+            elif tag == "ul":
+                found = False
+                for e in attrs:
+                    if e[0] == "id" and e[1] == "selectsample":
+                        found = True
+                        break
+                self.p(self.get_starttag_text())
+                if found:
+                    self.p(self.sampleHTML)
             else:
                 self.p(self.get_starttag_text())
         else:
@@ -82,7 +92,8 @@ class DataTextHTMLParser(HTMLParser):
             self.p(data)
 
     def handle_comment(self, data):
-        self.p("<!--%s-->" % (data,))
+        if data.strip()[0] == '[':
+            self.p("<!--%s-->" % (data,))
 
     def handle_entityref(self, name):
         self.p("&%s;" % (name,))
@@ -107,6 +118,7 @@ def run(html_path, json_path, out_path, conf_path, fallback_path):
     parser.localename = path.basename(json_path).replace('.json', '')
     parser.fallback_locale = json.loads("".join(open(fallback_path).readlines()))
     parser.replacements = read_conf.load_conf(conf_path)['REPLACEMENTS']
+    parser.sampleHTML = "".join(open("samplelinks.html.in").readlines())
     parser.feed("".join(open(html_path).readlines()))
     with open(out_path, 'w') as out:
         out.write("".join(parser.output))
